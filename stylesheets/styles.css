@@ -1,4 +1,8 @@
 .thumbnail-title {
-    background: rgb(96, 125, 139);
-    color: rgb(202, 238, 255)
+    background: rgb(11, 55, 77);
+    color: rgb(202, 238, 255);
+    display: block;
+    margin: 0;
+    padding: 0.4em 1em;
+
 }
