@@ -1,8 +1,45 @@
+body {
+    background: rgb(6, 75, 131);
+    font-size: 10px;
+}
+
+a[href="#"] {
+    text-decoration: none;
+}
+
+.logo-text {
+    background: white;
+    font-size: 37px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+thumbnail-image {
+    display: block;
+    width: 100;
+}
+
+.thumbnail-item {
+    display: block;
+    border: 1px solid rgba(100%, 100%, 100%);
+    border: 1px solid rgba(100%, 100%, 100%, 0.8);
+}
+
+/* every item EXCEPT the first */
+.thumbnail-item + .thumbnail-item {
+    margin: 10px;
+}
+
+.thumbnail-list {
+    list-style: none;
+    padding: 0;
+}
+
 .thumbnail-title {
     background: rgb(11, 55, 77);
     color: rgb(202, 238, 255);
     display: block;
+    font-size: 18px;
     margin: 0;
     padding: 0.4em 1em;
-
 }
