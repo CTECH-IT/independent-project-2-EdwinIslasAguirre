@@ -9,10 +9,18 @@
          url('fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
 }
 
+
+html, body {
+    height: 100%;
+}
+
 body {
     background: rgb(6, 75, 131);
+    display: flex;
+    flex-direction: column;
     font-size: 10px;
 }
+
 
 a[href="#"] {
     text-decoration: none;
@@ -31,10 +39,21 @@ thumbnail-image {
     width: 100;
 }
 
+.main-header {
+    flex: 0 1 auto;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .thumbnail-item {
-    display: block;
     border: 1px solid rgba(100%, 100%, 100%);
     border: 1px solid rgba(100%, 100%, 100%, 0.8);
+    display: inline-block;
+    width: 120px;
 }
 
 /* every item EXCEPT the first */
@@ -43,8 +62,17 @@ thumbnail-image {
 }
 
 .thumbnail-list {
+    flex: 0 1 auto;
     list-style: none;
+    order: 2;
+
+    overflow-x: auto;
     padding: 0;
+    white-space: nowrap;
+}
+
+.detail-image-container {
+    flex: 1 1 auto;
 }
 
 .thumbnail-title {
@@ -57,5 +85,5 @@ thumbnail-image {
 }
 
 .detail-image {
-    width: 90%
+    width: 30%
 }
