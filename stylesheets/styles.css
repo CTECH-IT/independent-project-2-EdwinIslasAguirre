@@ -15,7 +15,6 @@ html, body {
 
 body {
     background: rgb(6, 75, 131);
-    display: flex;
     flex-direction: column;
     font-size: 10px;
 }
@@ -103,7 +102,7 @@ thumbnail-image {
 }
 
 .detail-image {
-    width: 30%
+    width: 90%
 }
 
 @media all and (min-width: 768px) {

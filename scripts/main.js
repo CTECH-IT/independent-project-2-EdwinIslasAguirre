@@ -1,14 +1,11 @@
-const DETAIL_IMAGE_SELECTOR ='[data-image-role="target"]';
+const DETAIL_IMAGE_SELECTOR = '[data-image-role="target"]';
 const DETAIL_TITLE_SELECTOR = '[data-image-role="title"]';
 const THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]';
 
-function setDetails(imageUrl, titleText) {
+function setDetails(imageUrl) {
     'use strict';
     let detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
-    detailImage.setAttribute('src' , imageUrl);
-
-    let detailTitle = document.querySelector(DETAIL_TITLE_SELECTOR);
-    detailTitle.textContext = titleText;
+    detailImage.setAttribute('src', imageUrl);
 }
 
 function imageFromThumb(thumbnail) {
@@ -27,10 +24,11 @@ function setDetailsFromThumb(thumbnail) {
 }
 
 function addThumbClickHandler(thumb) {
-addEventListener('click', function(event) {
-    event.preventDefault();
-    setDetailsFromThumb(thumb);
-});
+    'use strict';
+    thumb.addEventListener('click', function(event) {
+        event.preventDefault();
+        setDetailsFromThumb(thumb);
+    });
 }
 
 function getThumbnailsArray() {
