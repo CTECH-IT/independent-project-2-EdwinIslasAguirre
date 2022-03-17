@@ -9,7 +9,6 @@
          url('fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
 }
 
-
 html, body {
     height: 100%;
 }
@@ -34,6 +33,9 @@ a[href="#"] {
     text-transform: uppercase;
 }
 
+.main-header {
+    flex: 0 1 auto;
+}
 
 .detail-image-container {
     flex: 1 1 auto;
@@ -50,16 +52,15 @@ a[href="#"] {
 .detail-image-title {
     color: white;
     font-size: 20px;
+    position: absolute;
+    bottom: -16px;
+    left: 4px;
 
 }
 
 thumbnail-image {
     display: block;
     width: 100;
-}
-
-.main-header {
-    flex: 0 1 auto;
 }
 
 .main-content {
