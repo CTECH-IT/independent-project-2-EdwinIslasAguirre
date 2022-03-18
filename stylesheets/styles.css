@@ -15,8 +15,9 @@ html, body {
 
 body {
     background: rgb(6, 75, 131);
+    color: white;
     flex-direction: column;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 
@@ -26,6 +27,7 @@ a[href="#"] {
 
 .logo-text {
     background: white;
+    color: black;
     font-family: lakeshore;
     font-size: 37px;
     text-align: center;
@@ -102,7 +104,26 @@ thumbnail-image {
 }
 
 .detail-image {
-    width: 90%
+    width: 30%
+}
+
+.p-text {
+    color: white;
+    font-size: 50px;
+}
+
+/* Hide all the detail image by default */
+.hidden-detail .detail-image-container {
+    display: none;
+}
+
+.hidden-detail .thumbnail-list {
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-detail .thumbnail-item {
+    max-width: 80%
 }
 
 @media all and (min-width: 768px) {

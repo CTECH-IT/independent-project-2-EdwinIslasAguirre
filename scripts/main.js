@@ -1,6 +1,8 @@
 const DETAIL_IMAGE_SELECTOR = '[data-image-role="target"]';
 const DETAIL_TITLE_SELECTOR = '[data-image-role="title"]';
 const THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]';
+const HIDDEN_DETAIL_CLASS = 'hidden-detail';
+const ESC_KEY_CODE = 27;
 
 function setDetails(imageUrl) {
     'use strict';
@@ -25,7 +27,7 @@ function setDetailsFromThumb(thumbnail) {
 
 function addThumbClickHandler(thumb) {
     'use strict';
-    thumb.addEventListener('click', function(event) {
+    thumb.addEventListener('click', function (event) {
         event.preventDefault();
         setDetailsFromThumb(thumb);
     });
@@ -38,10 +40,31 @@ function getThumbnailsArray() {
     return thumbnailArray;
 }
 
+//add the CSS class to <body> to hide the detail image
+function hideDetails() {
+    'use strict'
+    document.body.classList.add(HIDDEN_DETAIL_CLASS);
+}
+
+// remove the CSS class from <body> to show the detail image 
+
+
+function addKeyPressHandler() {
+    'use strict';
+    document.body.addEventListener('keyup', function (event) {
+        event.preventDefault();
+        console.log(event.keyCode);
+        if (event.keyCode === ESC_KEY_CODE) {
+            hideDetails();
+        }
+    });
+}
+
 function initializeEvents() {
     'use strict';
     let thumbnails = getThumbnailsArray();
     thumbnails.forEach(addThumbClickHandler);
+    addKeyPressHandler();
 }
 
 // run all the functions to link to the callback
