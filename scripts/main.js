@@ -31,9 +31,16 @@ function descriptionFromThumb(thumbnail) {
 
 function setDetailsFromThumb(thumbnail) {
     'use strict';
-    setDetails(imageFromThumb(thumbnail), titleFromThumb(thumbnail), 
-    descriptionFromThumb(thumbnail));
+    setDetails(imageFromThumb(thumbnail), titleFromThumb(thumbnail),
+        descriptionFromThumb(thumbnail));
 
+}
+
+function getThumbnailsArray() {
+    'use strict';
+    let thumbnails = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR);
+    let thumbnailArray = [].slice.call(thumbnails); // convert NodeList to an Array
+    return thumbnailArray;
 }
 
 function addThumbClickHandler(thumb) {
@@ -44,13 +51,6 @@ function addThumbClickHandler(thumb) {
     });
 }
 
-function getThumbnailsArray() {
-    'use strict';
-    let thumbnails = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR);
-    let thumbnailArray = [].slice.call(thumbnails); // convert NodeList to an Array
-    return thumbnailArray;
-}
-
 //add the CSS class to <body> to hide the detail image
 function hideDetails() {
     'use strict'
@@ -58,7 +58,6 @@ function hideDetails() {
 }
 
 // remove the CSS class from <body> to show the detail image 
-
 
 function addKeyPressHandler() {
     'use strict';

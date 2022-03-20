@@ -47,13 +47,13 @@ a[href="#"] {
 
 .detail-image-frame {
     position: relative;
-    text-align: center;
+    text-align: justify;
 }
 
 .detail-image-title {
     color: white;
     font-size: 20px;
-    position: absolute;
+    position: relative;
     bottom: -16px;
     left: 4px;
 
@@ -111,7 +111,7 @@ thumbnail-image {
 }
 
 .detail-image {
-    width: 30%
+    width: 100%
 }
 
 /* Hide all the detail image by default */
@@ -161,4 +161,3 @@ thumbnail-image {
         padding: 0 35px;
     }
 }
-
